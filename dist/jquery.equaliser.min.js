@@ -1,5 +1,5 @@
 /*!
- * Equaliser v1.0.4
+ * Equaliser v1.0.5
  * Make the heights of elements on the same row the same
  * https://mogusbi.co.uk
  *
