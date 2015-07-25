@@ -3,11 +3,11 @@
 
 ## Getting started
 ### NPM
-Install package with NPM and add it to your dependencies:
+Install package with NPM and add it to your dependencies:  
 `npm install @mogusbi/jquery.equaliser --save`
 
 ### Bower
-Install package with Bower and add it to your dependencies:
+Install package with Bower and add it to your dependencies:  
 `bower install mogusbi/jquery.equaliser --save`
 
 ## Introducing it to your page
@@ -36,5 +36,5 @@ Include the jQuery and the plugin to your page and then select the elements you 
 ```
 
 ## License
-Copyright &copy; Mo Gusbi.
+Copyright &copy; Mo Gusbi.  
 Licensed under the MIT license.
