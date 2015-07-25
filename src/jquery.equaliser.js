@@ -1,5 +1,5 @@
 /*!
- * Equaliser v1.0.3
+ * Equaliser v1.0.4
  * Make the heights of elements on the same row the same
  * https://mogusbi.co.uk
  *
@@ -7,13 +7,13 @@
  */
 ; (function ($, window, document, undefined) {
   'use strict';
-  
+
   var pluginName = 'equaliser',
       defaults = {
         minus: 0,
         add: 0
       };
- 
+
   function Plugin(element, options) {
     this.element = element;
     this.settings = $.extend({}, defaults, options);
@@ -21,20 +21,20 @@
     this._name = pluginName;
     this.init();
   }
- 
+
   $.extend(Plugin.prototype, {
     init: function () {
       var _this = this,
           resizeTimer;
-      
+
       $(window).on('load resize', function () {
         clearTimeout(resizeTimer);
-      
+
         resizeTimer = setTimeout(function () {
           _this.setHeights();
         }, 100);
       });
-      
+
       _this.setHeights();
     },
     setHeights: function () {
@@ -44,20 +44,20 @@
           rowDivs = [],
           topPosition = 0,
           currentDiv;
-      
+
       $(this.element)
         .removeAttr('style')
         .each(function () {
           $(this).removeAttr('style');
-          
+
           topPosition = $(this).offset().top;
-          
+
           if (currentRowStart !== topPosition) {
             // New row
             for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv += 1) {
               rowDivs[currentDiv].outerHeight(currentTallest - settings.minus + settings.add);
             }
-          
+
             rowDivs.length = 0;
             currentRowStart = topPosition;
             currentTallest = $(this).outerHeight();
@@ -65,10 +65,10 @@
           } else {
             // Current row
             rowDivs.push($(this));
-            
+
             currentTallest = (currentTallest < $(this).outerHeight()) ? ($(this).outerHeight()) : (currentTallest);
           }
-          
+
           // The final row
           for (currentDiv = 0; currentDiv < rowDivs.length; currentDiv += 1) {
             rowDivs[currentDiv].outerHeight(currentTallest - settings.minus + settings.add);
@@ -76,12 +76,12 @@
         });
     }
   });
-  
+
   $.fn[pluginName] = function (options) {
     if (!$.data(this, "plugin_" + pluginName)) {
       $.data(this, "plugin_" + pluginName, new Plugin(this, options));
     }
-    
+
     return this;
   };
 })(jQuery, window, document);
