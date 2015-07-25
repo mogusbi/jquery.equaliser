@@ -1,0 +1,33 @@
+{
+  "name": "@mogusbi/jquery.equaliser",
+  "description": "Make the heights of elements on the same row the same",
+  "version": "1.0.2",
+  "license": "MIT",
+  "main": "dist/jquery.equaliser.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mogusbi/jquery.equaliser.git"
+  },
+  "author": "Mo Gusbi",
+  "bugs": {
+    "url": "https://github.com/mogusbi/jquery.equaliser/issues"
+  },
+  "homepage": "https://github.com/mogusbi/jquery.equaliser#readme",
+  "dependencies": {
+    "jquery": "*"
+  },
+  "devDependencies": {
+    "del": "~1.2.0",
+    "gulp": "~3.9.0",
+    "gulp-jshint": "~1.11.2",
+    "gulp-jshint-html-reporter": "~0.1.3",
+    "gulp-uglify": "~1.2.0",
+    "gulp-strip-comments": "~1.0.1",
+    "jshint-stylish": "~2.0.1",
+    "gulp-rename": "~1.2.2",
+    "path": "~0.11.14"
+  }
+}

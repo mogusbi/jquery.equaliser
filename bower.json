@@ -1,0 +1,18 @@
+{
+  "name": "jquery.equaliser",
+  "version": "1.0.2",
+  "homepage": "https://github.com/mogusbi/jquery.equaliser",
+  "description": "Make the heights of elements on the same row the same",
+  "main": "dist/jquery.equaliser.js",
+  "authors": [
+    "Mo Gusbi <me@mogusbi.co.uk> (https://mogusbi.co.uk)"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
