@@ -1,5 +1,5 @@
 /*!
- * Equaliser v1.0.5
+ * Equaliser v1.0.6
  * Make the heights of elements on the same row the same
  * https://mogusbi.co.uk
  *
@@ -50,7 +50,7 @@
         .each(function () {
           $(this).removeAttr('style');
 
-          topPosition = $(this).offset().top;
+          topPosition = Math.round($(this).offset().top);
 
           if (currentRowStart !== topPosition) {
             // New row
